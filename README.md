@@ -1,5 +1,12 @@
 # Inventory Management System
 
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-brightgreen)
+![Java](https://img.shields.io/badge/Java-17-blue)
+![MySQL](https://img.shields.io/badge/MySQL-8-orange)
+![Maven](https://img.shields.io/badge/Maven-3.9-red)
+![JUnit](https://img.shields.io/badge/JUnit-5-green)
+![JaCoCo](https://img.shields.io/badge/JaCoCo-95%25-success)
+
 A simple **Spring Boot Inventory Management System** that provides REST APIs for managing products.  
 It demonstrates clean code, layered architecture, unit tests, and integration with **MySQL**.
 
@@ -26,20 +33,41 @@ It demonstrates clean code, layered architecture, unit tests, and integration wi
 
 ---
 
-## ⚙️ Setup MySQL
+## ⚙️ Setup
 
-1. Install MySQL (local or Docker).
-2. Create a database:
-3. Create user, password and edit them in application.properties
+1. **Setup MySQL Database:**
+   ```sql
+   CREATE DATABASE <database_name>;
+   CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>';
+   GRANT ALL PRIVILEGES ON <database_name>.* TO '<username>'@'localhost';
+   ```
 
-```sql
-CREATE DATABASE inventory_db;
-```
+2. **Configure Environment Variables:**
+   Create a `.env` file in the root directory:
+   ```
+   DB_URL=jdbc:mysql://<host>:<port>/<database_name>?allowPublicKeyRetrieval=true&useSSL=false
+   DB_USERNAME=<username>
+   DB_PASSWORD=<password>
+   SERVER_PORT=<port>
+   ```
 
 ---
-##  💫️ Run the App
-1. mvn clean install
-2. mvn clean verify
+## 🚀 Run the App
+
+1. **Build and Test:**
+   ```bash
+   mvn clean install
+   mvn clean verify
+   ```
+
+2. **Run Application:**
+   ```bash
+   mvn spring-boot:run
+   ```
+
+3. **Access API:**
+   - Base URL: `http://localhost:8080`
+   - API Documentation: Available via REST endpoints
 
 
 ---
