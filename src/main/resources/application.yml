@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/inventory_db?allowPublicKeyRetrieval=true&amp;useSSL=false}
-    username: ${DB_USERNAME:inventoryuser}
-    password: ${DB_PASSWORD:inventorypassword}
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   
   sql:
     init:
@@ -18,4 +18,4 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
 server:
-  port: ${SERVER_PORT:8080}
+  port: ${SERVER_PORT}

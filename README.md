@@ -45,7 +45,7 @@ It demonstrates clean code, layered architecture, unit tests, and integration wi
 2. **Configure Environment Variables:**
    Create a `.env` file in the root directory:
    ```
-   DB_URL=jdbc:mysql://<host>:<port>/<database_name>?allowPublicKeyRetrieval=true&useSSL=false
+   DB_URL=<dburl>
    DB_USERNAME=<username>
    DB_PASSWORD=<password>
    SERVER_PORT=<port>
